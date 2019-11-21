@@ -1,23 +1,40 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body {}
-
+body {
+}
+.contaier {
+  margin: 0 10% 0 10%;
+}
 header {
-    text-align: center;
-    margin-top: 50px;
-    background: rgb(230, 230, 230);
+  margin-top: 10%;
 }
 
 .selectBtnContainer {
-    display: block;
-    border:
+  display: block;
+
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-.selectBtnContainer>h3,
 .selectBtn {
-    display: inline;
+  /* margin-left: 70%;
+  width: 15%;
+  height: 30px; */
+  margin-left: 75%;
+}
+.btn {
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 10px;
+}
+.uploadBtn {
+  display: block;
+  margin: 10px auto;
+  width: 30%;
 }
