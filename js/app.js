@@ -1,11 +1,15 @@
+const inputFileButton = document.querySelector(".inputFile");
 const chooseButton = document.querySelector(".selectBtn");
 const list = document.querySelector(".warningList");
-chooseButton.addEventListener("click", render);
+chooseButton.addEventListener("click", chooseFile);
+inputFileButton.addEventListener("change", getName);
 
-function render() {
-  for (let i = 0; i < 10; i++) {
-    const listItem = document.createElement("li");
-    listItem.textContent = "Hello Earth";
-    list.appendChild(listItem);
+function chooseFile() {
+  inputFileButton.click();
+}
+
+function getName() {
+  if (inputFileButton.value) {
+    console.log(inputFileButton.value);
   }
 }

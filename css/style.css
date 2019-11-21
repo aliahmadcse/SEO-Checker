@@ -52,7 +52,7 @@ header {
 }
 
 @media screen and (max-width:1160px) {
-    
+
     .selectBtnContainer>h3 {
         margin-top: 10px;
     }
