@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-}
 .contaier {
   margin: 0 10% 0 10%;
 }
@@ -15,16 +13,23 @@ header {
 
 .selectBtnContainer {
   display: block;
-
   border: 2px solid black;
   border-radius: 5px;
   padding: 10px;
+  background: rgb(230, 230, 230);
+}
+
+header {
+  text-align: center;
+  margin: 50px;
+}
+
+.selectBtnContainer {
+  display: block;
+  border: 1px solid black;
 }
 
 .selectBtn {
-  /* margin-left: 70%;
-  width: 15%;
-  height: 30px; */
   margin-left: 75%;
 }
 .btn {
@@ -32,6 +37,9 @@ header {
   cursor: pointer;
   overflow: hidden;
   padding: 10px;
+}
+.btn:hover {
+  background: rgb(172, 177, 177);
 }
 .uploadBtn {
   display: block;
