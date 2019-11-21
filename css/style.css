@@ -67,7 +67,11 @@ header {
     }
 
 }
-
+.choosenMessage{
+    color:rgba(212, 63, 63, 0.897);
+    font-size: 18px;
+    margin-top:10px;
+}
 @media screen and (max-width:510px) {
     .selectBtnContainer>h3 {
         display: inline;

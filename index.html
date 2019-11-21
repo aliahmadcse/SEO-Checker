@@ -12,11 +12,17 @@
       <header>
         <div class="selectBtnContainer">
           <h3>Select your file</h3>
-          <input type="file" hidden="hidden" accept=".html" class="inputFile" />
+          <input
+            type="file"
+            hidden="hidden"
+            accept=".html,.htm"
+            class="inputFile"
+          />
           <button class="selectBtn btn">Select File</button>
         </div>
         <div class="uploadBtnContainer">
-          <button class="uploadBtn btn">Upload</button>
+          <p class="choosenMessage"></p>
+          <button class="uploadBtn btn">Analyze</button>
         </div>
       </header>
       <main>
