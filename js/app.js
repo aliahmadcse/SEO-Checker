@@ -29,13 +29,13 @@ function readFile() {
     reader.abort();
   };
   //event triggered, when reader finishes reading file
-  reader.onload = analyzeFile;
+  reader.onload = addScript;
 }
 
-function analyzeFile(e) {
+//function to concatenate the script string with the read file
+function addScript(e) {
   //getting the file text as string
   const fileText = e.target.result;
-  const len = fileText.length;
   //the string to be concatenated with the file text
   const jsStr = '<script src="../js/analyze.js"></script>\n';
   const searchItem = "</body>";
@@ -47,4 +47,5 @@ function analyzeFile(e) {
   const remainingStr = fileText.slice(indexOfBody);
   //concatenating the three strings
   const finalText = strBeforeBody.concat(jsStr, remainingStr);
+  console.log(finalText);
 }
