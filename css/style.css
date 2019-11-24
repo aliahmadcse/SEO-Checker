@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-header {
-    margin-top: 10%;
-}
-
 .selectBtnContainer {
     display: block;
     border: 1px solid black;
@@ -21,13 +17,18 @@ header {
     margin: 50px 70px 0px 70px;
 }
 
-.selectBtnContainer {
+.submit,
+.selectBtn {
     display: block;
-    border: 1px solid black;
+}
+
+.submit {
+    margin: 20px auto auto auto;
+    width: 30%;
 }
 
 .selectBtn {
-    margin-left: 75%;
+    margin: 20px auto auto auto;
 }
 
 .btn {
@@ -37,52 +38,34 @@ header {
     padding: 10px;
 }
 
+.selectBtnContainer>h3 {
+    font-size: 23px;
+}
+
 .btn:hover {
     background: rgb(172, 177, 177);
 }
 
-.uploadBtn {
+.analyzeBtn {
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
     width: 30%;
 }
 
-.selectBtnContainer>h3 {
-    float: left;
-}
 
-@media screen and (max-width:1160px) {
-
-    .selectBtnContainer>h3 {
-        margin-top: 10px;
-    }
-
-    .selectBtnContainer {
-        width: 100%;
-    }
-
-    .selectBtnContainer>h3,
-    .selectBtn {
-        display: block;
-    }
-
-}
-.selectMessage{
-    color:rgba(212, 63, 63, 0.897);
+.selectMessage {
+    color: rgba(83, 71, 71, 0.897);
     font-size: 18px;
-    margin-top:10px;
+    margin-top: 10px;
 }
-@media screen and (max-width:510px) {
-    .selectBtnContainer>h3 {
-        display: inline;
-        text-align: center;
-    }
-
-    .uploadBtn {
-        width: 100%;
-    }
-
-    header {
-        margin: 30px 20px 0px 20px;
-    }
+.iframe {
+    width:100%;
+    height:auto;
+    display: block;
+    margin:auto;
+}
+.pageMessage{
+    color: rgba(83, 71, 71, 0.897);
+    text-align:center;
+    margin:10px auto 10px auto;
 }
