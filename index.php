@@ -18,7 +18,8 @@
     $target_dir = "test/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+    // $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+    
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
       $message = "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded. Click Analyze to test the file";
       //opening the uploaded file to process it
@@ -26,16 +27,16 @@
       $fileData = fread($file, filesize($target_file));
       fclose($file);
       //adding the script tag to the read file
-      $toFind = "</body>";
-      $indexOfBody = strpos($fileData, $toFind);
-      $strBeforeBody = substr($fileData, 0, $indexOfBody);
-      $strRemaining = substr($fileData, $indexOfBody);
-      $script = "<script src='../js/app.js'></script>";
-      $finalStr = $strBeforeBody . $script . $strRemaining;
+      // $toFind = "</body>";
+      // $indexOfBody = strpos($fileData, $toFind);
+      // $strBeforeBody = substr($fileData, 0, $indexOfBody);
+      // $strRemaining = substr($fileData, $indexOfBody);
+      // $script = "<script src='../js/app.js'></script>";
+      // $finalStr = $strBeforeBody . $script . $strRemaining;
 
       //opening the test.html to write data into it
       $fileW = fopen("test/test.html", "w") or die("Unable to open the file!");
-      fwrite($fileW, $finalStr);
+      fwrite($fileW, $fileData);
       fclose($fileW);
     } else {
       $message = "Sorry, there was an error uploading your file.";
@@ -59,7 +60,7 @@
     <main>
       <h3 class="pageMessage"></h3>
       <iframe class="iframe"></iframe>
-      
+
       <ul class="warningList"></ul>
 
     </main>

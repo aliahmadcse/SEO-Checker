@@ -10,5 +10,5 @@ function analyzeFile(){
     iframe.src="test/test.html";
     iframe.style.display="block";
     pageMessage.innerHTML="Your Page Looks like!";
-    console.log(iframe.children)
+    console.log(iframe.childNodes)
 }
