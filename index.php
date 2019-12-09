@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <style>
     <?php include "./css/style.css" ?>
   </style>
@@ -19,7 +20,7 @@
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
     // $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-    
+
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
       $message = "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded. Click Analyze to test the file";
       //opening the uploaded file to process it
@@ -59,7 +60,7 @@
     </header>
     <main>
       <h3 class="pageMessage"></h3>
-      <iframe class="iframe"></iframe>
+      <iframe id="iframe"></iframe>
 
       <ul class="warningList"></ul>
 
